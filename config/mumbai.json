@@ -1,0 +1,6 @@
+{
+    "url": "https://polygon-mumbai.infura.io/v3/",
+    "USDC": "0xa61164Ba924dDAa711DC8e9A121CfB8FdF680Aef",
+    "ETH": "0xbe1c5D13Fab6bF8bf7cD1868EB064d17855944c0",
+    "BridgeMookup": "0x7cC1C9B374b95AeeDA136192A08bFb7aFfE66C48"
+}
