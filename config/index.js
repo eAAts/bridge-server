@@ -1,7 +1,13 @@
 const mumbai = require("./mumbai.json");
-const mnt = require("./mnt.json");
+const polygon = require("./polygon.json");
+const mantle = require("./mantle.json");
+const scroll = require("./scroll.json");
+const filecoin = require("./filecoin.json");
 
 module.exports = {
     mumbai,
-    mnt,
+    polygon,
+    mantle,
+    scroll,
+    filecoin,
 };
