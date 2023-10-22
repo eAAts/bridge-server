@@ -5,10 +5,10 @@ require("dotenv").config();
 
 const config = require("../config/index");
 
-const subProvider = new ethers.providers.JsonRpcProvider(config.mnt.url);
+const subProvider = new ethers.providers.JsonRpcProvider(config.mantle.url);
 const subDeployer = new ethers.Wallet(process.env.PRIVATE_KEY, subProvider);
 
-const mainProvider = new ethers.providers.JsonRpcProvider(config.mumbai.url + process.env.INFURA_KEY);
+const mainProvider = new ethers.providers.JsonRpcProvider(config.polygon.url + process.env.INFURA_KEY);
 const mainDeployer = new ethers.Wallet(process.env.PRIVATE_KEY, mainProvider);
 
 function sleep(ms) {
@@ -16,8 +16,8 @@ function sleep(ms) {
 }
 
 async function main() {
-  const subBridgeMookup = await ethers.getContractAt("IBridgeMookup", config.mnt.BridgeMookup, subDeployer);
-  const mainBridgeMookup = await ethers.getContractAt("IBridgeMookup", config.mumbai.BridgeMookup, mainDeployer);
+  const subBridgeMookup = await ethers.getContractAt("IBridgeMookup", config.mantle.BridgeMookup, subDeployer);
+  const mainBridgeMookup = await ethers.getContractAt("IBridgeMookup", config.polygon.BridgeMookup, mainDeployer);
   
   while (true) {
     // const subGasPrice = (await mainProvider.getFeeData()).gasPrice;
